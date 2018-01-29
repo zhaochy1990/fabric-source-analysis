@@ -1,5 +1,4 @@
 这个文件定义了SystemChaincode这个类，提供了一些通用方法
-SystemChaincode
 
 ```golang
 // SystemChaincode defines the metadata needed to initialize system chaincode
@@ -33,4 +32,11 @@ type SystemChaincode struct {
 	// having to remove entry from importsysccs.go
 	Enabled bool
 }
+```
+
+SystemChaincode有如下方法
+```golang
+// 注册System Chaincode
+// 调用inproccontroller的Register方法
+func registerSysCC(syscc *SystemChaincode) (bool, error)
 ```
